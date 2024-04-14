@@ -1,6 +1,9 @@
 export const getCategoryProduct = async (category: string) => {
-  const res = await fetch(`http://localhost:5000/products/${category}`, {
-    cache: "no-store",
-  });
+  const res = await fetch(
+    `https://elegant-fashion-server.vercel.app/products/${category}`,
+    {
+      cache: "no-store",
+    }
+  );
   return res.json();
 };

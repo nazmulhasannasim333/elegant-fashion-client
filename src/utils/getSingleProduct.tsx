@@ -1,6 +1,9 @@
 export const getSingleProduct = async (id: string) => {
-  const res = await fetch(`http://localhost:5000/product/${id}`, {
-    cache: "no-store",
-  });
+  const res = await fetch(
+    `https://elegant-fashion-server.vercel.app/product/${id}`,
+    {
+      cache: "no-store",
+    }
+  );
   return res.json();
 };

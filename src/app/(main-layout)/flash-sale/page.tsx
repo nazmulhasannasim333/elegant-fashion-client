@@ -15,9 +15,12 @@ type TProduct = {
 };
 
 const FlashSale = async () => {
-  const res = await fetch("http://localhost:5000/flash-sale", {
-    cache: "no-store",
-  });
+  const res = await fetch(
+    "https://elegant-fashion-server.vercel.app/flash-sale",
+    {
+      cache: "no-store",
+    }
+  );
   const products = await res.json();
 
   return (
